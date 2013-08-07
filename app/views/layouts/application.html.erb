@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <h1><center>The Ultimate Cookbook</center></h1>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <body style= "background-color; color: #222; center; font-family: 2.5em; color: black; fantasy;></center>
+<font color=""#FF0000"></font>
+
+  <div class="topbar">
+  <div class="fill">
+    <div class="container">
+      <a class="brand" href="/"></a>
+      <ul class="nav">
+        <li class="active"><a href="/ideas">Ideas</a></li>
+        <li ><%= link_to 'Add your own recipe', new_idea_path %></li>
+        <li class="container">
+        Rails Girls 2013
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+    <footer>
+   
+    </footer>
+<div class="container">
+  <%= yield %>
+</div>
+
+</body>
+</html>
