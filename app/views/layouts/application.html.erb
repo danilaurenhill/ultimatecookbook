@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
- 
-  <h1 style="border-style:solid; border-width:medium; border-color:pink;"><center>The Ultimate Cookbook</center></h1>
+  <h1><center>The Ultimate Cookbook</center></h1>
+    <h1 style="border-style:solid; border-width:medium; border-color:pink;"><center>The Ultimate Cookbook</center></h1>
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-  <body style= "background-color; color: #222; center; font-family: 2.5em; color: black; fantasy;></center>
+  <body style= "background-image:url('http://i268.photobucket.com/albums/jj28/emily7896/Background.jpg'); color: #666; center; font-family: 2.5em; color: maroon; fantasy;></center>
 <font color=""#FF0000"></font>
 
   <div class="topbar">
@@ -16,11 +16,11 @@
     <div class="container">
       <a class="brand" href="/"></a>
       <ul class="nav">
-        <li class="active"><a href="/ideas">Ideas</a></li>
-        <li ><%= link_to 'Add your own recipe', new_idea_path %></li>
+      <li ><%= link_to 'Add your own recipe', new_idea_path %></li>
         <li class="container">
-        Rails Girls 2013
         </li>
+        <li ><%= link_to 'Home page', ideas_path %></li>
+        <li ><%= link_to 'About page', ideas_path %></li>
       </ul>
     </div>
   </div>
