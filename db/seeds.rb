@@ -8,6 +8,8 @@
 
 require_dependency 'idea'
 
+Idea.destroy_all
+
 YAML.load_file("#{Rails.root}/lib/ideas.yml").each do |idea|
     idea.save
   end
