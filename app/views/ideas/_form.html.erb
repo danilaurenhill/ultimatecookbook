@@ -11,19 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
+  <div class="field"><center>
+    <%= f.label :name_of_recipe %><br>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
+  </center></div>
+  <div class="field"><center>
+    <%= f.label :Ingredients %><br>
     <%= f.text_area :description %>
-  </div>
-  <div class="field">
+  </center></div>
+  <div class="field"><center>
+    <%= f.label :Directons %><br>
+    <%= f.text_area :description %>
+  </center></div>
+  <div class="field"><center>
     <%= f.label :picture %><br>
     <%= f.file_field :picture %>
-  </div>
-  <div class="actions">
+  </center></div>
+  <div class="actions"><center>
     <%= f.submit %>
-  </div>
+  </center></div>
 <% end %>

@@ -1,21 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
-  <div class="span9">
+<div class="row"><center>
+  <div class="span9"><center>
     <%= image_tag(@idea.picture_url, :width => "100%") if @idea.picture.present? %>
-  </div>
-    <h3>Comments</h3>
+  </center></div>
+    <h3><center>Recipe</center></h3>
     <% @idea.comments.each do |comment| %>
-      <div>
+      <div><center>
         <strong><%= comment.user_name %></strong>
         <br />
         <p><%= comment.body %></p>
-      </div>
+      </center></div>
     <% end %>
     <%= render 'comments/form' %>
-  </div>
+  </center></div>
 
-  <div class="span3">
+  <div class="span3"><center>
     <p><b>Name: </b><%= @idea.name %></p>
     <p><b>Description: </b><%= @idea.description %></p>
     <p>
@@ -23,5 +23,5 @@
       <%= link_to 'Destroy', @idea, confirm: 'Are you sure?', method: :delete %> |
       <%= link_to 'Back', ideas_path %>
     </p>
-  </div>
+  </center></div>
 </div>
