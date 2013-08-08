@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+require_dependency 'idea'
+
 YAML.load_file("#{Rails.root}/lib/ideas.yml").each do |idea|
     idea.save
   end
