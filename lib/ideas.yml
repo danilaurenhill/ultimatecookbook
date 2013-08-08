@@ -1,0 +1,44 @@
+---
+- !ruby/object:Idea
+  attributes:
+    id: 3
+    name: Breakfast
+    description: Choose from our selection of delectable breakfast meals that you
+      and your whole family will enjoy.
+    picture: sarapan-makan-pagi.jpg
+    created_at: 2013-08-07 14:28:54.003930000 Z
+    updated_at: 2013-08-08 00:06:31.430331000 Z
+- !ruby/object:Idea
+  attributes:
+    id: 5
+    name: Lunch
+    description: Choose from our wide variety of delicious noontime dishes.
+    picture: 149040308.336.255.jpg
+    created_at: 2013-08-07 14:39:51.215856000 Z
+    updated_at: 2013-08-07 14:39:51.215856000 Z
+- !ruby/object:Idea
+  attributes:
+    id: 6
+    name: Snacks and Beverages
+    description: Choose from a selection of especially delicious and nutritious snack
+      foods and specialty beverages
+    picture: 0511-1102-2821-0720_Cartoon_Pretzel_Ad_clipart_image.jpg
+    created_at: 2013-08-07 14:56:56.571969000 Z
+    updated_at: 2013-08-07 14:56:56.571969000 Z
+- !ruby/object:Idea
+  attributes:
+    id: 7
+    name: Dinner
+    description: Choose from these wholesome, tasty dinner meal recipes to create
+      a wonderful dinner that you and your family will love.
+    picture: food.png
+    created_at: 2013-08-07 15:04:50.843032000 Z
+    updated_at: 2013-08-07 15:04:50.843032000 Z
+- !ruby/object:Idea
+  attributes:
+    id: 8
+    name: Desserts
+    description: Choose from this variety of yummy dessert.
+    picture: slampiece-logo-fg-c.png
+    created_at: 2013-08-07 15:09:03.096025000 Z
+    updated_at: 2013-08-07 15:09:26.930155000 Z
