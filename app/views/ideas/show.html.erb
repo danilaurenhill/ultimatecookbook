@@ -1,23 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row"><center>
-  <div class="span9"><center>
+  <div class="span12"><center>
     <%= image_tag(@idea.picture_url, :width => "100%") if @idea.picture.present? %>
   </center></div>
     <h3><center>Recipe</center></h3>
     <% @idea.comments.each do |comment| %>
       <div><center>
-        <strong><%= comment.user_name %></strong>
-        <br />
-        <p><%= comment.body %></p>
+        <p><%= comment.name %></p>
+        <p><%= comment.ingredients %></p>
+        <p><%= comment.directions %></p>
+        <p><%= comment.picture %></p>
       </center></div>
     <% end %>
     <%= render 'comments/form' %>
   </center></div>
 
-  <div class="span3"><center>
+  <div class="span12"><center>
     <p><b>Name: </b><%= @idea.name %></p>
-    <p><b>Description: </b><%= @idea.description %></p>
+    <p><b>ingredients: </b><%= @idea.ingredients %></p>
+    <p><b>directions: </b><%= @idea.directions %></p>
+    <p><b>picture: </b><%= @idea.picture %>
+    </p>
     <p>
       <%= link_to 'Edit', edit_idea_path(@idea) %> |
       <%= link_to 'Destroy', @idea, confirm: 'Are you sure?', method: :delete %> |

@@ -7,7 +7,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </center></head>
-  <body style= "background-image:url('http://i268.photobucket.com/albums/jj28/emily7896/Background.jpg'); color: #666; center; font-family: 2.5em; color: maroon; fantasy;></center>
+  <body style= "background-image:url('http://www.wallibs.com/gudang/simple-lights-twitter-background.jpg'); color: #666; center; font-family: 2.5em; color: maroon; fantasy;></center>
 <font color=""#FF0000"></font>
 
   <div class="topbar>
@@ -15,16 +15,36 @@
     <div class="container">
       <a class><center="brand" href="/"></center></a>
       <ul class="nav">
-      	<li><%= link_to 'Add your own recipe', new_idea_path %></li>
+      	<li><%= link_to 'Add your own recipe', new_recipe_path %></li>
+        <li><%= link_to 'Add your own category', new_idea_path %></li>
         <li class="container"></li>
         <li><%= link_to 'Home page', ideas_path %></li>
+        <% Idea.all.each do |idea| %>
+         <li><%= link_to idea.name, idea %></li>
+        <% end %>
         <li><%= link_to 'About page', ideas_path %></li>
       </ul>
+      <p class="navbar-text pull-right">
+       <% if user_signed_in? %>
+         Logged in as <strong><%= current_user.email %></strong>.
+       <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+       <% else %>
+       <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+       <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+       <% end %>
     </div>
   </div>
   </div>
 		<div class="container">
-  			<%= yield %>
+  
+  <% if notice %>
+    <p class="alert alert-notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-error"><%= alert %></p>
+  <% end %>
+        <%= yield %>
 		</div>
 
 		<footer>

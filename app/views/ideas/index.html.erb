@@ -2,10 +2,10 @@
 
 <% @ideas.each do |idea| %>
 <div class="row"><center>
-  <div class="span6"><center>
-    <%= image_tag idea.picture_url, :width => '55%' if idea.picture.present?%>
+  <div class="span12"><center>
+    <%= image_tag idea.picture_url, :length => '100%' if idea.picture.present?%>
     <h4><center><%= link_to idea.name, idea %></h4></center>
-    <%= idea.description %>
+    <%= idea.ingredients %>
   </center></div>
 <% end %>
 

@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row"><center>
+  <div class="span12"><center>
+    <%= image_tag(@recipe.picture_url, :width => "100%") if @recipe.picture.present? %>
+  </center></div>
+  </center></div>
+    
+  <div class="span12"><center>
+    <p><b>Name: </b><%= @recipe.name %></p>
+    <p><b>ingredients: </b><%= @recipe.ingredients %></p>
+    <p><b>directions: </b><%= @recipe.directions %></p>
+    <p><b>picture: </b><%= @recipe.picture %>
+    </p>
+    <p>
+      <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+      <%= link_to 'Destroy', @recipe, confirm: 'Are you sure?', method: :delete %> |
+      <%= link_to 'Back', recipes_path %>
+    </p>
+  </center></div>
+</div>
